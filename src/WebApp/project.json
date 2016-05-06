@@ -14,10 +14,10 @@
         "web": "Microsoft.AspNet.Server.Kestrel"
     },
 
-    "scripts": { "postbuild": [ "powershell -Command \"$env:project:Directory=Get-Location;Start-Process powershell -Verb runAs -ArgumentList \\\"-Command `\\\"Set-Location $env:project:Directory;ng build`\\\"\\\" " ] },
+    "scripts": { "postbuild": [ "powershell -Command \"./buildScripts/ngCli.ps1 -Action build\"  -NonInteractive" ] },
 
     "frameworks": {
-        "dnx451": { },
+        "dnx46": { },
         "dnxcore50": { }
     },
 
@@ -29,5 +29,5 @@
         "**.user",
         "**.vspscc"
     ],
-    "-vs-binding": { "AfterBuild": [ "powershell -Command \"$env:project:Directory=Get-Location;Start-Process powershell -Verb runAs -ArgumentList \\\"-Command `\\\"Set-Location $env:project:Directory;ng build`\\\"\\\"" ] }
+    "-vs-binding": { "AfterBuild": [ "powershell -Command \"./buildScripts/ngCli.ps1 -Action build\"  -NonInteractive" ] }
 }
