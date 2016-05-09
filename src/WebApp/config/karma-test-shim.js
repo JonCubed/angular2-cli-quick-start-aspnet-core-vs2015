@@ -5,7 +5,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 __karma__.loaded = function () {
 };
 
-var distPath = '/base/dist/';
+var distPath = '/base/wwwroot/';
 var appPath = distPath + 'app/';
 
 function isJsFile(path) {

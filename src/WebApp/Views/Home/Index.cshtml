@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Angular 2 QuickStart";
+    ViewBag.BaseUrl = "/";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="libs/css/styles.css">
+}
+
+@section BodyScripts
+{
+    <script src="vendor/es6-shim/es6-shim.js"></script>
+    <script src="vendor/reflect-metadata/Reflect.js"></script>
+    <script src="vendor/systemjs/dist/system-polyfills.js"></script>
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/zone.js/dist/zone.js"></script>
+
+    <script>
+        System.import('system-config.js').then(function () {
+          System.import('main');
+        }).catch(console.error.bind(console));
+    </script>
+}
+
+<h1>MVC</h1>
+<cache vary-by="@Context.Request.Path">
+    <my-app>Loading...</my-app>
+</cache>

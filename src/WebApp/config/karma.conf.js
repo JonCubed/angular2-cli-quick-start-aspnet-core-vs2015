@@ -14,21 +14,21 @@ module.exports = function (config) {
       }
     },
     files: [
-      { pattern: 'dist/vendor/es6-shim/es6-shim.js', included: true, watched: false },
-      { pattern: 'dist/vendor/zone.js/dist/zone.js', included: true, watched: false },
-      { pattern: 'dist/vendor/reflect-metadata/Reflect.js', included: true, watched: false },
-      { pattern: 'dist/vendor/systemjs/dist/system-polyfills.js', included: true, watched: false },
-      { pattern: 'dist/vendor/systemjs/dist/system.src.js', included: true, watched: false },
-      { pattern: 'dist/vendor/zone.js/dist/async-test.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/es6-shim/es6-shim.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/zone.js/dist/zone.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/reflect-metadata/Reflect.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/systemjs/dist/system-polyfills.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/systemjs/dist/system.src.js', included: true, watched: false },
+      { pattern: 'wwwroot/vendor/zone.js/dist/async-test.js', included: true, watched: false },
 
       { pattern: 'config/karma-test-shim.js', included: true, watched: true },
 
       // Distribution folder.
-      { pattern: 'dist/**/*', included: false, watched: true }
+      { pattern: 'wwwroot/**/*', included: false, watched: true }
     ],
     exclude: [
       // Vendor packages might include spec files. We don't want to use those.
-      'dist/vendor/**/*.spec.js'
+      'wwwroot/vendor/**/*.spec.js'
     ],
     preprocessors: {},
     reporters: ['progress'],
